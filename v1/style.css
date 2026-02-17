@@ -1,0 +1,26 @@
+/* WHITE TEXT EDITOR + BLACK TEXT */
+.stTextArea > label > div > div > div [data-baseweb="base-input"] {
+    background-color: white !important;
+    color: black !important;
+    border: 2px solid #e1e5e9 !important;
+    border-radius: 12px !important;
+    padding: 20px !important;
+    font-family: 'Times New Roman', serif !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.12) !important;
+}
+
+/* Blue gradient buttons */
+.stButton > button {
+    background: linear-gradient(135deg, #4299e1, #3182ce) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 12px 24px !important;
+}
+
+/* Keep all other Streamlit styling */
+.stApp { background-color: inherit !important; }
+h1, h2, h3 { color: inherit !important; }
+.stSuccess { background-color: inherit !important; }

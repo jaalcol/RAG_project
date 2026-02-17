@@ -1,0 +1,78 @@
+personal_config:
+
+  # === AUTHOR & AFFILIATION ===
+  author_name: "Javier Alhambra"
+  co_authors:
+    - "M. García"
+    - "A. López"
+  affiliation1: "Pharmacovigilance Department"
+  affiliation2: "University Medical Center"
+  city: "Valencia"
+  country: "Spain"
+  email: "javier.alhambra@pharmacovigilance.es"
+  orcid: "0000-0002-1825-0097"
+
+  # === PAPER IDENTIFICATION ===
+  title_template: "Advanced {terms} {title_suffix}"
+  title_suffix: "Framework 2026"
+  abstract_template: >
+    This study presents an automated ontology extraction framework for pharmacovigilance document analysis focusing on {terms}.
+    The system employs advanced PDF text processing and semantic term filtering to generate structured knowledge representations.
+    Results demonstrate enhanced accuracy in identifying domain-specific concepts compared to traditional manual approaches.
+
+  index_terms_template: "{terms}"
+
+  # === SECTIONS (docs/sections/ folder) ===
+  sections:
+    order:
+      - "I. INTRODUCTION"
+      - "II. METHODS" 
+      - "III. RESULTS"
+      - "IV. DISCUSSION"
+      - "V. CONCLUSION"
+
+  section_pdfs:
+    "I. INTRODUCTION": "introduction.pdf"
+    # "II. METHODS": "sections/methods.pdf"
+    # Add more as they exist
+
+  # === OUTPUT SETTINGS ===
+  output:
+    filename_prefix: "pv_paper"
+    output_dir: "results"
+
+  # === TERM EXTRACTION ===
+  bad_terms:
+    - "plainlanguagesummary"
+    - "supplementary"
+    - "table"
+    - "fig"
+    - "article"
+    - "checkforupdates"
+  skip_words:
+    - "introduction"
+    - "methods"
+    - "results"
+  min_phrase_length: 12
+  require_vowels: true
+
+  # === LLM & RAG (docs/data/ folder) ===
+  llm_model: "llama3.2:1b"
+  chunk_size: 400
+  chunk_overlap: 50
+  top_k: 2
+
+  # === REFERENCES ===
+  references:
+    count: 6
+    template: "[{i}] J. Alhambra et al., \"{title}\", *{journal}*, vol. {vol}, no. {no}, pp. {pages}, 2026."
+  journal_pool:
+    - "Drug Safety"
+    - "Pharmacoepidemiology and Drug Safety"
+    - "Clinical Pharmacology & Therapeutics"
+
+  # === ACKNOWLEDGMENTS ===
+  acknowledgments: "European Pharmacovigilance Research Institute"
+  funding: "Grant #RMP-2026 from Spanish Agency of Medicines"
+  conflicts: "The authors declare no conflicts of interest"
+
