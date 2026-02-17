@@ -1,2 +1,10 @@
-.rag_env
-.rag_env310
+# Virtual environments
+rag_env310
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS junk
+.DS_Store
+.env
